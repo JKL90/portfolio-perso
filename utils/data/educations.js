@@ -1,20 +1,26 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Licence Professionnelle en Systèmes Informatiques et Logiciels",
+    duration: "2021 - 2024",
+    institution: "Ecole Supérieure de Management ESM BENIN, Cotonou",
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "Formation en Langue Anglaise",
+    duration: "2021",
+    institution: "Durra Institute of Language, Accra, Ghana",
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "Formation Professionnelle en Informatique Générale",
+    duration: "2020",
+    institution: "GETECH (GIOVERI ENTERPRISE TECHNOLOGY)",
+  },
+  {
+    id: 4,
+    title: "Baccalauréat",
+    duration: "2018 - 2019",
+    institution: "Notre Dame de toutes Grâces, Cotonou",
   }
 ]

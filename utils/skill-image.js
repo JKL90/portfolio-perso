@@ -36,6 +36,7 @@ import javascript from '../app/assets/svg/skills/javascript.svg';
 import julia from '../app/assets/svg/skills/julia.svg';
 import kotlin from '../app/assets/svg/skills/kotlin.svg';
 import lightroom from '../app/assets/svg/skills/lightroom.svg';
+import laravel from '../app/assets/svg/skills/laravel.svg';
 import markdown from '../app/assets/svg/skills/markdown.svg';
 import materialui from '../app/assets/svg/skills/materialui.svg';
 import matlab from '../app/assets/svg/skills/matlab.svg';
@@ -128,6 +129,8 @@ export const skillsImage = (skill) => {
       return capacitorjs;
     case 'coffeescript':
       return coffeescript;
+    case 'laravel':
+      return laravel;
     case 'memsql':
       return memsql;
     case 'mongodb':

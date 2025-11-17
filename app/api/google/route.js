@@ -11,18 +11,18 @@ export async function POST(request) {
     const res = await axios.post(url);
     if (res.data.success) {
       return NextResponse.json({
-        message: "Captcha verification success!!",
+        message: "Captcha verification réussis!!",
         success: true,
       })
     };
 
     return NextResponse.json({
-      error: "Captcha verification failed!",
+      error: "Captcha verification échouée!",
       success: false,
     }, { status: 500 });
   } catch (error) {
     return NextResponse.json({
-      error: "Captcha verification failed!",
+      error: "Captcha verification échouée!",
       success: false,
     }, { status: 500 });
   }

@@ -52,7 +52,7 @@ async function sendEmail(payload, message) {
   const mailOptions = {
     from: "Portfolio", 
     to: process.env.EMAIL_ADDRESS, 
-    subject: `New Message From ${name}`, 
+    subject: `Nouveau Message de ${name}`, 
     text: message, 
     html: generateEmailTemplate(name, email, userMessage), 
     replyTo: email, 
@@ -62,7 +62,7 @@ async function sendEmail(payload, message) {
     await transporter.sendMail(mailOptions);
     return true;
   } catch (error) {
-    console.error('Error while sending email:', error.message);
+    console.error("Erreur pendant l'envoie d'email:", error.message);
     return false;
   }
 };
@@ -82,7 +82,7 @@ export async function POST(request) {
       }, { status: 400 });
     }
 
-    const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
+    const message = `Nouveau message de ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
 
     // Send Telegram message
     const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
@@ -93,19 +93,19 @@ export async function POST(request) {
     if (telegramSuccess && emailSuccess) {
       return NextResponse.json({
         success: true,
-        message: 'Message and email sent successfully!',
+        message: 'Message et email envoyé avec succès!',
       }, { status: 200 });
     }
 
     return NextResponse.json({
       success: false,
-      message: 'Failed to send message or email.',
+      message: 'Envoie de message ou email échouée.',
     }, { status: 500 });
   } catch (error) {
-    console.error('API Error:', error.message);
+    console.error('API Erreur:', error.message);
     return NextResponse.json({
       success: false,
-      message: 'Server error occurred.',
+      message: 'Erreur serveur.',
     }, { status: 500 });
   }
 };

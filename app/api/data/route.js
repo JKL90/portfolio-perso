@@ -5,7 +5,7 @@ export async function GET(request) {
     success: true,
     message: 'hle!',
     data: {
-      message: 'Message and email sent successfully!',
+      message: 'Message et email envoyés avec succès!',
     }
   }, { status: 200 });
 };
