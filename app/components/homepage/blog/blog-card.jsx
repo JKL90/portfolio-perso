@@ -19,7 +19,7 @@ function BlogCard({ blog }) {
 
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group">
-      <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
+      <div className="h-32 lg:h-150 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         {/* next/image accepte des strings (chemins publics ou urls) */}
         <Image
           src={cover}
@@ -54,9 +54,11 @@ function BlogCard({ blog }) {
           </p>
         </Link>
 
-        {/* <p className='mb-2 text-sm text-[#16f2b3]'>
-          {`${reading} Min Read`}
-        </p> */}
+        {blog?.tags && (
+          <p className='mb-2 text-sm text-[#16f2b3]'>
+            {`${blog.tags.join(', ')}`}
+          </p>
+        )}
 
         <p className='text-sm lg:text-base text-[#d3d8e8] pb-3 lg:pb-6 line-clamp-3'>
           {description}
